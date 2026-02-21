@@ -148,6 +148,27 @@ a:hover {
     background-color: #e55a00;
 }
 
+.btn_kafe{
+    padding: 20px 35px;
+}
+.overlei_servis{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5); /* здесь 0.5 определяет уровень прозрачности (от 0 до 1) */
+    backdrop-filter: blur(2px); /* эффект размытия */  
+    border: 6px groove rgba(164,90,13,0.64);
+    border-radius: 40px 0px 40px 40px;
+    position: relative;
+    top: -250px;
+    left: 40%;
+    display: none;
+    z-index:1;
+}
+.close-btn_kafe {
+    margin-left: 450px;
+}
+
+
 /* О нас */
 .about {
     padding: 4rem 2rem;
