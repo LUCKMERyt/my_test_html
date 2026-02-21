@@ -58,7 +58,7 @@ function openModal(imageSrc, altText) {
 const btnKafe = document.querySelector(".btn_kafe")
 const closeBtnKafe = document.querySelector(".close-btn_kafe")
 const modal = document.querySelector(".overlei_servis")
-console.log(btnKafe)
+
 
 btnKafe.addEventListener('click', (event) => {
     event.preventDefault()
