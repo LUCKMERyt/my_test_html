@@ -172,7 +172,7 @@ a:hover {
 
 .overlei_servis{
     width: 500px;
-    height: 500px;
+    height: 650px;
     background-color: rgba(0, 0, 0, 0.5); /* здесь 0.5 определяет уровень прозрачности (от 0 до 1) */
     backdrop-filter: blur(2px); /* эффект размытия */  
     border: 6px groove rgba(164,90,13,0.64);
@@ -192,7 +192,12 @@ a:hover {
     margin-right: 5px;
     margin-bottom: 4px;
 }
-
+.container_kafe p {
+    font-style: italic;
+    font-weight: 700; 
+    opacity: 1;
+    text-shadow: 0 0 20px #fff;
+}
 /* О нас */
 .about {
     padding: 4rem 2rem;
