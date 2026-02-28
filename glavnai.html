@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+
     <title>Игровой Компьютерный Клуб</title>
     <link rel="stylesheet" href="css/glavnai.css">
     <script src="js/script.js" defer></script>
@@ -73,6 +78,26 @@
             <div class="zatemnenie">
                 <div class="overlei_servis">
                     <button class="close-btn_kafe" >X</button>
+                    <div class="container_kafe">
+
+                      <!-- first column -->
+                      <div class="col-1">
+                          <div class="photo large">Photo 1</div>
+                          <div class="col-1-parent">
+                              <div class="photo col-1-child">Photo 2</div>
+                              <div class="photo col-1-child">Photo 3</div> 
+                              <div class="photo col-2-child">Photo 4</div>
+                          </div>
+                      </div>
+                      <!-- second column -->
+                      <div class="col-2">
+                          <div class="photo col-2-child">Photo 5</div>
+                          <div class="photo col-2-child">Photo 6</div>
+                          <div class="photo col-2-child">Photo 7</div>
+                          <div class="photo col-2-child">Photo 8</div>
+                      </div>
+              
+                  </div>
                 </div>
             </div>
         </div>
@@ -80,22 +105,53 @@
 
     <section id="news" class="news">
         <h2>Новости</h2>
-        <div class="news-slider">
+        <!-- <div class="news-slider">
             <div class="news-item">
                 <h3>Новый турнир CS:GO</h3>
                 <p>Приглашаем всех участников на еженедельный турнир CS:GO. Призовой фонд - 15 000 рублей!</p>
-                <p class="news-date">15 октября 2023</p>
+                <p class="news-date">15 октября 2025</p>
             </div>
             <div class="news-item">
                 <h3>Обновление оборудования</h3>
                 <p>Мы обновили наше оборудование! Теперь у нас RTX 4090 и последние процессоры Intel.</p>
-                <p class="news-date">10 октября 2023</p>
+                <p class="news-date">10 октября 2025</p>
             </div>
             <div class="news-item">
                 <h3>Акция на абонементы</h3>
                 <p>Специальное предложение: месячный абонемент со скидкой 20% для новых клиентов.</p>
-                <p class="news-date">5 октября 2023</p>
+                <p class="news-date">5 октября 2025</p>
             </div>
+        </div> -->
+
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <h3>Новый турнир CS:GO</h3>
+                <p>Приглашаем всех участников на еженедельный турнир CS:GO. Призовой фонд - 15 000 рублей!</p>
+                <p class="news-date">15 октября 2025</p>
+            </div>
+            <div class="swiper-slide">
+              <h3>Обновление оборудования</h3>
+                <p>Мы обновили наше оборудование! Теперь у нас RTX 4090 и последние процессоры Intel.</p>
+                <p class="news-date">10 октября 2025</p>
+            </div>
+            <div class="swiper-slide">
+              <h3>Акция на абонементы</h3>
+                <p>Специальное предложение: месячный абонемент со скидкой 20% для новых клиентов.</p>
+                <p class="news-date">5 октября 2025</p>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        
+            <!-- Кнопки навигации -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
     </section>
 
@@ -153,6 +209,9 @@
             <div id="telegram-widget" style="display: inline-block; margin: 0 10px;"></div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>
