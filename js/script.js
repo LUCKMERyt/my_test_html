@@ -58,11 +58,13 @@ function openModal(imageSrc, altText) {
 const btnKafe = document.querySelector(".btn_kafe")
 const closeBtnKafe = document.querySelector(".close-btn_kafe")
 const modal = document.querySelector(".overlei_servis")
+const zatemnenie = document.querySelector(".zatemnenie")
 
 
 btnKafe.addEventListener('click', (event) => {
     event.preventDefault()
     modal.style.display = "block"
+    zatemnenie.style.display = "block"
 
     // Заблокировать прокрутки
     disableScroll()
@@ -78,6 +80,7 @@ btnKafe.addEventListener('click', (event) => {
 closeBtnKafe.addEventListener('click', (event) => {
     event.preventDefault()
     modal.style.display = "none"
+    zatemnenie.style.display = "none"
 
     // Разблокировка прокрутки
     enableScroll()
@@ -88,6 +91,22 @@ closeBtnKafe.addEventListener('click', (event) => {
         document.body.style.width = '';
         window.scrollTo(0, scrollPosition);
         }
+})
+
+// Закрытие по клику на затемнённый фон
+zatemnenie.addEventListener('click', (event) => {
+    if (event.target === zatemnenie) {
+        modal.style.display = "none"
+        zatemnenie.style.display = "none"
+        enableScroll()
+        function enableScroll() {
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollPosition);
+        }
+    }
 })
 
 // swiper свайпер новостей

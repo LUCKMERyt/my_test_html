@@ -170,21 +170,108 @@ a:hover {
     transform: scale(0.96);
 }
 
-.overlei_servis{
-    width: 500px;
-    height: 650px;
-    background-color: rgba(0, 0, 0, 0.5); /* здесь 0.5 определяет уровень прозрачности (от 0 до 1) */
-    backdrop-filter: blur(2px); /* эффект размытия */  
-    border: 6px groove rgba(164,90,13,0.64);
-    border-radius: 40px 0px 40px 40px;
-    position: relative;
-    top: -250px;
-    left: 40%;
+.zatemnenie {
     display: none;
-    z-index:1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* здесь 0.5 определяет уровень прозрачности (от 0 до 1) */
+    z-index: 999;
+}
+
+.overlei_servis {
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    background-color: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);/* эффект размытия */ 
+    border: 3px solid #ff6600;
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
 }
 .close-btn_kafe {
-    margin-left: 450px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    background: #ff6600;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+.close-btn_kafe:hover {
+    background: #e55a00;
+    transform: rotate(90deg);
+}
+
+/* Категории */
+.category {
+    margin-bottom: 30px;
+}
+.category h3 {
+    color: #ff6600;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6600;
+    text-align: left;
+}
+
+/* Сетка товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Карточка товара */
+.product-card {
+    background: linear-gradient(145deg, #2a2a2a, #333);
+    border: 2px solid #444;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    width: 150px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.product-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: #ff6600;
+    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+}
+.product-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.product-card h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+.product-card .price {
+    color: #ff6600;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0 0 0;
 }
 .container_kafe img  {
     border: 2px solid #3a3e3f;
