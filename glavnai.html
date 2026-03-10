@@ -1,23 +1,34 @@
 <!DOCTYPE html>
+<!-- Главная страница игрового компьютерного клуба -->
 <html lang="ru">
 <head>
+    <!-- Кодировка страницы -->
     <meta charset="UTF-8">
+    <!-- Адаптивность для мобильных устройств -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Подключение стилей Swiper для слайдера новостей -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     
-
+    <!-- Заголовок страницы -->
     <title>Игровой Компьютерный Клуб</title>
+    <!-- Подключение основных стилей -->
     <link rel="stylesheet" href="css/glavnai.css">
+    <!-- Подключение JavaScript с атрибутом defer для загрузки после HTML -->
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <!-- ============================================
+        ШАПКА САЙТА (HEADER)
+    ============================================ -->
     <header>
         <nav>
+            <!-- Логотип клуба -->
             <div class="logo">
-                    <img src="image/logo.png" alt="PC Club Logo">
+                <img src="image/logo.png" alt="Логотип PC Club">
             </div>
+            <!-- Навигационное меню -->
             <ul>
                 <li><a href="#home">Главная</a></li>
                 <li><a href="#services">Услуги</a></li>
@@ -28,6 +39,9 @@
         </nav>
     </header>
 
+    <!-- ============================================
+        ГЛАВНЫЙ БАННЕР (HERO SECTION)
+    ============================================ -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>Добро пожаловать в Игровой Компьютерный Клуб!</h2>
@@ -36,8 +50,12 @@
         </div>
     </section>
 
+    <!-- ============================================
+        ГАЛЕРЕЯ (GALLERY SECTION)
+        Отображает игровые станции и консоли
+    ============================================ -->
     <section id="gallery" class="gallery">
-        <h2>Галерея</h2> <!-- Все pc и ps -->
+        <h2>Галерея</h2>
         <div class="gallery-images">
             <div class="gallery-item">
                 <img src="image/pc1.webp" alt="Игровая станция">
@@ -48,34 +66,45 @@
                 <p>Занято: 3 Свободно: 5</p>
             </div>
             <div class="gallery-item">
-                <img src="image/ps.webp" alt="Консоли">
+                <img src="image/ps.webp" alt="Консоли PlayStation">
                 <p>Занято: 3 Свободно: 3</p>
             </div>
             <div class="gallery-item">
-                <img src="image/pc_gerl.webp" alt="Розовый компьютер">
+                <img src="image/pc_gerl.webp" alt="Розовый игровой компьютер">
                 <p>Занято: 1 Свободно: 3</p>
             </div>
-        </div>
     </section>
 
+    <!-- ============================================
+        УСЛУГИ (SERVICES SECTION)
+        Бронирование, турниры, кафе
+    ============================================ -->
     <section id="services" class="services">
         <h2>Наши услуги</h2>
         <div class="service-list">
+            <!-- Услуга: Бронирование ПК -->
             <div class="service">
                 <h3>Бронировать</h3>
                 <p>Мощные ПК для любых игр.</p>
-                <button id="btn_bron" class="btn_bron" href="../glavnai.html" >Забронировать</button>
+                <button id="btn_bron" class="btn_bron" href="../glavnai.html">Забронировать</button>
             </div>
+            <!-- Услуга: Турниры -->
             <div class="service">
                 <h3>Турниры</h3>
                 <p>Участвуйте в еженедельных турнирах.</p>
-                <button id="btn_turnir" class="btn_turnir" href="../regestrashi.html" >Регистрация</button>
+                <button id="btn_turnir" class="btn_turnir" href="../regestrashi.html">Регистрация</button>
             </div>
+            <!-- Услуга: Кафе -->
             <div class="service">           
                 <h3>Кафе</h3>
                 <p>Напитки и закуски во время игры.</p>
                 <button class="btn_kafe">Заказать</button>
             </div>
+
+            <!-- ============================================
+                МОДАЛЬНОЕ ОКНО КАФЕ
+                Отображает меню с напитками и едой
+            ============================================ -->
             <div class="zatemnenie">
                 <div class="overlei_servis">
                     <button class="close-btn_kafe">✕</button>
@@ -153,9 +182,14 @@
         </div>
     </section>
 
+    <!-- ============================================
+        НОВОСТИ (NEWS SECTION)
+        Слайдер с новостями клуба
+    ============================================ -->
     <section id="news" class="news">
         <h2>Новости</h2>
         
+        <!-- Контейнер слайдера Swiper -->
         <div class="swiper-container news-swiper">
             <div class="swiper-wrapper">
                 <!-- Новость 1 -->
@@ -212,30 +246,43 @@
         </div>
     </section>
 
+    <!-- ============================================
+        О НАС (ABOUT SECTION)
+    ============================================ -->
     <section id="about" class="about">
         <h2>О нас</h2>
         <p>Мы предоставляем высококачественные игровые компьютеры и атмосферу для настоящих геймеров.</p>
     </section>
 
+    <!-- ============================================
+        ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ (FAQ SECTION)
+    ============================================ -->
     <section id="faq" class="faq">
-      <h2>Часто задаваемые вопросы</h2>
+        <h2>Часто задаваемые вопросы</h2>
+        <!-- Вопрос 1 -->
         <details>
           <summary>Как забронировать компьютер?</summary>
           <p>Вы можете забронировать компьютер через наш Telegram-бот или по телефону.</p>
-      </details>
-      <details open>
+        </details>
+        <!-- Вопрос 2 (открыт по умолчанию) -->
+        <details open>
           <summary>Какие игры доступны?</summary>
-          <p>ОУ нас установлены все популярные игры: CS:GO, Dota 2, FIFA, и многие другие. </p>
-      </details>
-      <details>
+          <p>У нас установлены все популярные игры: CS:GO, Dota 2, FIFA, и многие другие.</p>
+        </details>
+        <!-- Вопрос 3 -->
+        <details>
           <summary>Есть ли скидки для постоянных клиентов?</summary>
           <p>Да, мы предоставляем скидки для постоянных клиентов и специальные предложения.</p>
-
-      </details>
+        </details>
     </section>
 
+    <!-- ============================================
+        КОНТАКТЫ (CONTACT SECTION)
+        Форма обратной связи и контактная информация
+    ============================================ -->
     <section id="contact" class="contact">
         <h2>Контакты</h2>
+        <!-- Форма обратной связи -->
         <form action="#" method="post" class="contact-form">
             <label for="contact-name">Имя:</label>
             <input type="text" id="contact-name" name="name" required>
@@ -251,6 +298,7 @@
 
             <button type="submit" class="btn">Отправить</button>
         </form>
+        <!-- Контактная информация -->
         <div class="contact-info">
             <p>Адрес: ул. Игровая, 10, Москва</p>
             <p>Телефон: +7 (495) 123-45-67</p>
@@ -258,16 +306,16 @@
         </div>
     </section>
     
+    <!-- ============================================
+        FOOTER САЙТА (FOOTER)
+    ============================================ -->
     <footer>
         <p>&copy; 2026 Игровой Компьютерный Клуб. Все права защищены.</p>
-        <div class="social-links">
-            <div id="vk-widget" style="display: inline-block; margin: 0 10px;"></div>
-            <div id="telegram-widget" style="display: inline-block; margin: 0 10px;"></div>
-        </div>
     </footer>
 
+    <!-- Подключение библиотеки Swiper для слайдера новостей -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 </html>

@@ -78,13 +78,20 @@ a:hover {
     background-color: #333;
     color: #fff;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form input:hover,
+.register-form textarea:hover {
+    border-color: #ff6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
 }
 
 .register-form input:focus,
 .register-form textarea:focus {
     outline: none;
     border-color: #ff6600;
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
 }
 
 .register-form textarea {
@@ -101,11 +108,17 @@ a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
     background-color: #e55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
 }
 
 /* Footer */

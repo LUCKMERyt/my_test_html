@@ -1,4 +1,11 @@
-/* Основные стили */
+/* ============================================
+            Основные стили
+   ============================================ */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +13,10 @@ body {
     background-color: #1a1a1a;
     color: #fff;
 }
+
+/* ============================================
+            Шапка сайта (Header)
+   ============================================ */
 
 header {
     background-color: #333;
@@ -24,13 +35,6 @@ nav {
     position: fixed;
 }
 
-ul {
-    padding: 0;
-    margin: 1rem 0 0 0;
-    text-align: center;
-
-}
-
 .logo img {
     width: 100px;
     height: auto;
@@ -46,6 +50,7 @@ ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 0;
+    text-align: center;
 }
 
 ul li {
@@ -56,13 +61,18 @@ ul li {
 a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
     color: #ff6600;
+    text-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
 }
 
-/* Hero секция */
+/* ============================================
+            Hero секция (Главный баннер)
+   ============================================ */
+
 .hero {
     background-image: url('image/hero-bg.jpg');
     background-size: cover;
@@ -103,7 +113,10 @@ a:hover {
     background-color: #e55a00;
 }
 
-/* Услуги */
+/* ============================================
+            Услуги
+   ============================================ */
+
 .services {
     padding: 4rem 2rem;
     text-align: center;
@@ -115,7 +128,6 @@ a:hover {
 
 .service-list {
     justify-content: space-around;
-
 }
 
 .service {
@@ -126,11 +138,21 @@ a:hover {
     width: 300px;
     display: inline-block;
     vertical-align: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+    border-color: #ff6600;
 }
 
 .service h3 {
     color: #ff6600;
 }
+
+/* Кнопки услуг */
 
 .btn_bron,
 .btn_turnir,
@@ -164,11 +186,16 @@ a:hover {
     background: linear-gradient(135deg, #c48703, #c48703);
     color: #ffffff;
 }
-.btn_bron,
-.btn_turnir,
+
+.btn_bron:active,
+.btn_turnir:active,
 .btn_kafe:active {
     transform: scale(0.96);
 }
+
+/* ============================================
+            Модальное окно кафе
+   ============================================ */
 
 .zatemnenie {
     display: none;
@@ -186,7 +213,7 @@ a:hover {
     max-width: 800px;
     max-height: 80vh;
     background-color: rgba(20, 20, 20, 0.95);
-    backdrop-filter: blur(10px);/* эффект размытия */ 
+    backdrop-filter: blur(10px); /* эффект размытия */ 
     border: 3px solid #ff6600;
     border-radius: 20px;
     position: relative;
@@ -198,6 +225,7 @@ a:hover {
     padding: 20px;
     overflow-y: auto;
 }
+
 .close-btn_kafe {
     position: absolute;
     top: 15px;
@@ -213,15 +241,18 @@ a:hover {
     transition: all 0.3s ease;
     z-index: 10;
 }
+
 .close-btn_kafe:hover {
     background: #e55a00;
     transform: rotate(90deg);
 }
 
-/* Категории */
+/* Категории кафе */
+
 .category {
     margin-bottom: 30px;
 }
+
 .category h3 {
     color: #ff6600;
     font-size: 1.5rem;
@@ -232,6 +263,7 @@ a:hover {
 }
 
 /* Сетка товаров */
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -240,6 +272,7 @@ a:hover {
 }
 
 /* Карточка товара */
+
 .product-card {
     background: linear-gradient(145deg, #2a2a2a, #333);
     border: 2px solid #444;
@@ -250,11 +283,13 @@ a:hover {
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
 .product-card:hover {
     transform: translateY(-10px) scale(1.05);
     border-color: #ff6600;
     box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
 }
+
 .product-card img {
     width: 100px;
     height: 100px;
@@ -262,54 +297,92 @@ a:hover {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
 .product-card h4 {
     color: #fff;
     font-size: 1rem;
     margin: 5px 0;
 }
+
 .product-card .price {
     color: #ff6600;
     font-size: 1.2rem;
     font-weight: bold;
     margin: 5px 0 0 0;
 }
-.container_kafe img  {
+
+.container_kafe img {
     border: 2px solid #3a3e3f;
     padding: 11px;
     margin-right: 5px;
     margin-bottom: 4px;
 }
+
 .container_kafe p {
     font-style: italic;
-    font-weight: 700; 
+    font-weight: 700;
     opacity: 1;
     text-shadow: 0 0 20px #fff;
 }
 
+/*  ============================================
+        Галерея
+    ============================================ */
 
-
-/*  swiper свайпер новостей */
-.swiper-container {
-    width: 600px;
-    height: 300px;
-
+.gallery {
+    text-align: center;
 }
-/* Новости */
-.news-date {
-    font-style: italic;
-    font-weight: 700; 
-    opacity: 1;
-    text-shadow: 0 0 20px #fff;
+
+.gallery-images {
+    text-align: center;
 }
+
+.gallery-item {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    max-width: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 5px;
+    border: 2px solid #ff6600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.gallery-item p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.gallery-item:hover p {
+    color: #ff6600;
+}
+
+/* ============================================
+            Новости
+   ============================================ */
 
 .news {
     width: 100%;
     padding: 3rem 2rem;
     position: relative;
     background: linear-gradient(180deg, #1a1a1a 0%, #222 100%);
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.news h2{
+.news h2 {
     padding: 0 30px;
     text-shadow: 5px 4px 3px #999;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -317,15 +390,15 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-/* Слайдер новостей */
-.news-swiper {
-    width: 100%;
-    max-width: 35%;
-    height: auto;
-    padding-bottom: 50px;
+.news-date {
+    font-style: italic;
+    font-weight: 700;
+    opacity: 1;
+    text-shadow: 0 0 20px #fff;
 }
 
 /* Карточка новости */
+
 .news-card {
     background: linear-gradient(145deg, #2a2a2a, #333);
     border-radius: 20px;
@@ -339,7 +412,13 @@ a:hover {
     border: 2px solid transparent;
 }
 
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+}
+
 /* Категории новостей */
+
 .news-card.category-tournament {
     border-left: 5px solid #ff6600;
 }
@@ -352,7 +431,8 @@ a:hover {
     border-left: 5px solid #32cd32;
 }
 
-/* Бейдж категории */
+
+
 .news-category {
     display: inline-block;
     padding: 5px 15px;
@@ -379,6 +459,7 @@ a:hover {
 }
 
 /* Контент карточки */
+
 .news-card h3 {
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 700;
@@ -402,7 +483,28 @@ a:hover {
     font-style: italic;
 }
 
+/* ============================================
+            Swiper - Слайдер новостей
+   ============================================ */
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.news-swiper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
 /* Пагинация */
+
 .swiper-pagination-bullet {
     background: #666 !important;
     opacity: 1 !important;
@@ -415,13 +517,19 @@ a:hover {
 }
 
 /* Кнопки навигации */
+
 .news-swiper .swiper-button-next,
 .news-swiper .swiper-button-prev {
     color: #ff6600 !important;
     background: rgba(255, 102, 0, 0.1);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    overflow: visible;
+}
+
+.news {
+    --swiper-navigation-size: 40px;
 }
 
 .news-swiper .swiper-button-next:after,
@@ -434,54 +542,38 @@ a:hover {
     background: rgba(255, 102, 0, 0.3);
 }
 
+/* ============================================
+            О нас
+   ============================================ */
 
-/* О нас */
 .about {
     padding: 4rem 2rem;
     text-align: center;
     background-color: #222;
 }
-/* Вопросы */
 
-.faq{
+/* ============================================
+            Вопросы (FAQ)
+   ============================================ */
+
+.faq {
     margin: 0 20px;
 }
-/* Контакты */
+
+/* ============================================
+            Контакты
+   ============================================ */
+
 .contact {
     padding: 1rem 2rem;
     background-color: #333;
 }
 
-/* Галерея */
-.gallery {
-    text-align: center;
-}
+/* ============================================
+            Адаптивные стилий
+   ============================================ */
 
-.gallery-images {
-    text-align: center;
-}
-
-.gallery-item {
-    text-align: center;
-    display: inline-block;
-    margin: 10px;
-    width: 200px;
-    max-width: 250px;
-}
-
-.gallery-item img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 5px;
-    border: 2px solid #ff6600;
-}
-
-.gallery-item p {
-    margin: 5px 0 0 0;
-    font-size: 0.9rem;
-    color: #fff;
-}
-
+/* Мобильные устройства */
 
 @media (max-width: 480px) {
     header {
@@ -538,9 +630,15 @@ a:hover {
     .gallery-item p {
         font-size: 0.8rem;
     }
+
+        /* Адаптивные стили для Контакты */
+    .contact-form{
+        width: 40px;
+    }
 }
 
-/* меню */
+/* Меню для телеыфонов-планшеты */
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -559,12 +657,45 @@ a:hover {
         text-align: center;
     }
 
-    ul.show {
-        display: block;
+
+    /* Адаптивные стили для Новости (Swiper) */
+    .news-swiper {
+        padding: 0 40px;
     }
 
-    ul li {
-        display: block;
-        margin: 0.5rem 0;
+    .swiper-container {
+        height: 250px;
+    }
+
+    .news-card {
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .news-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .news-card p {
+        font-size: 0.9rem;
+    }
+
+    .news-swiper .swiper-button-next,
+    .news-swiper .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .news-swiper .swiper-button-next:after,
+    .news-swiper .swiper-button-prev:after {
+        font-size: 14px;
+    }
+
+
+
+    /* Адаптивные стили для Контакты */
+    .contact-form{
+        width: 40px;
     }
 }
+

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
+<!-- Страница регистрации пользователя -->
 <html lang="ru">
 <head>
+    <!-- Кодировка страницы -->
     <meta charset="UTF-8">
+    <!-- Адаптивность для мобильных устройств -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
     <title>Регистрация - Игровой Компьютерный Клуб</title>
+    <!-- Подключение стилей страницы регистрации -->
     <link rel="stylesheet" href="css/regestrashi.css">
 </head>
 <body>
+    <!-- ============================================
+        ШАПКА САЙТА (HEADER)
+    ============================================ -->
     <header>
         <nav>
+            <!-- Логотип -->
             <div class="logo">
                 <h1>PC Club</h1>
             </div>
+            <!-- Навигационное меню -->
             <ul>
                 <li><a href="glavnai.html">Главная</a></li>
                 <li><a href="#register">Регистрация</a></li>
@@ -19,27 +29,41 @@
         </nav>
     </header>
 
+    <!-- ============================================
+        ФОРМА РЕГИСТРАЦИИ (REGISTER SECTION)
+    ============================================ -->
     <section id="register" class="register-form">
         <h2>Регистрация пользователя</h2>
+        
+        <!-- Форма регистрации -->
         <form action="#" method="post">
+            <!-- Поле: Имя пользователя -->
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required>
 
+            <!-- Поле: Email -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
+            <!-- Поле: Пароль -->
             <label for="password">Пароль:</label>
             <input type="password" id="password" name="password" required>
 
+            <!-- Поле: Любимые игры -->
             <label for="games">Любимые игры:</label>
             <textarea id="games" name="games" placeholder="Перечислите ваши любимые игры"></textarea>
 
+            <!-- Кнопка отправки формы -->
             <button type="submit" class="submit-btn">Зарегистрироваться</button>
         </form>
     </section>
 
+    <!-- ============================================
+        ПОДВАЛ САЙТА (FOOTER)
+    ============================================ -->
     <footer>
         <p>&copy; 2026 Игровой Компьютерный Клуб. Все права защищены.</p>
+        <!-- Ссылки на социальные сети -->
         <div class="social-links">
             <a href="https://vk.com/pcclub" target="_blank" style="color: #fff; margin: 0 10px;">VK</a>
             <a href="https://t.me/pcclub" target="_blank" style="color: #fff; margin: 0 10px;">Telegram</a>
