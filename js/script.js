@@ -90,7 +90,7 @@ closeBtnKafe.addEventListener('click', (event) => {
         document.body.style.top = '';
         document.body.style.width = '';
         window.scrollTo(0, scrollPosition);
-        }
+                }
 })
 
 // Закрытие по клику на затемнённый фон
@@ -106,7 +106,7 @@ zatemnenie.addEventListener('click', (event) => {
             document.body.style.width = '';
             window.scrollTo(0, scrollPosition);
         }
-    }
+        }
 })
 
 // swiper свайпер новостей
