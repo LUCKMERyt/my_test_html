@@ -637,7 +637,10 @@ summary::-webkit-details-marker {
     display: flex;
     flex-direction: column;
     border: 1px #ff6600 solid
-
+}
+.contact-form input{
+    min-height:30px ;
+    max-width: 500px; /* Ограничение на максимальную ширину */
 }
 
 /* ============================================
