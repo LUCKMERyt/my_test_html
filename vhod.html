@@ -9,7 +9,7 @@
     <!-- Заголовок страницы -->
     <title>Регистрация - Игровой Компьютерный Клуб</title>
     <!-- Подключение стилей страницы регистрации -->
-    <link rel="stylesheet" href="css/regestrashi.css">
+    <link rel="stylesheet" href="css/vhod.css">
 </head>
 <body>
     <!-- ============================================
@@ -24,22 +24,20 @@
             <!-- Навигационное меню -->
             <ul>
                 <li><a href="glavnai.html">Главная</a></li>
-                <li><a href="#register">Регистрация</a></li>
+                <li><a href="regestrashi.html">Регистрация</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- ============================================
-        ФОРМА РЕГИСТРАЦИИ (REGISTER SECTION)
+        ФОРМА ВХОДА (VHOD SECTION)
     ============================================ -->
-    <section id="register" class="register-form">
-        <h2>Регистрация пользователя</h2>
+    <section id="vhod" class="vhod-form">
+        <h2>Вход пользователя</h2>
+        <h1>ведите свои данные при регистрации</h1>
         
         <!-- Форма регистрации -->
         <form action="#" method="post">
-            <!-- Поле: Имя пользователя -->
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
 
             <!-- Поле: Email -->
             <label for="email">Email:</label>
@@ -48,18 +46,16 @@
             <!-- Поле: Пароль -->
             <label for="password">Пароль:</label>
             <input type="password" id="password" name="password" required>
-
-            <!-- Поле: Любимые игры -->
-            <label for="games">Любимые игры:</label>
-            <textarea id="games" name="games" placeholder="Перечислите ваши любимые игры"></textarea>
-
+            
             <!-- Кнопка отправки формы -->
-            <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            <button type="submit" class="submit-btn">Войти</button>
         </form>
-        <div class="vhod_action">
-            <label for="acaynt_yes">Если у вас уже есть акаунты то можете</label>
-            <a class="a_href" href="vhod.html">Войти</a>
+        <div class="regestr_action">
+            <label for="acaynt_no">Если нет акаунты то можете</label>
+            <a class="a_href" href="regestrashi.html">Зарегистрироваться</a>
         </div>
+        
+        
     </section>
 
     <!-- ============================================
